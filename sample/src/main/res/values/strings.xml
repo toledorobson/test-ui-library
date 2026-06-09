@@ -1,0 +1,10 @@
+<resources>
+    <string name="tul_sample_app_name">Test UI Library Sample</string>
+    <string name="tul_sample_compose_tab">Compose</string>
+    <string name="tul_sample_view_tab">XML View</string>
+    <string name="tul_sample_compose_title">Compose LoadingButton</string>
+    <string name="tul_sample_view_title">XML LoadingButtonView</string>
+    <string name="tul_sample_body">Tap the button to preview the loading state.</string>
+    <string name="tul_sample_submit">Submit</string>
+    <string name="tul_sample_loading">Submitting</string>
+</resources>
