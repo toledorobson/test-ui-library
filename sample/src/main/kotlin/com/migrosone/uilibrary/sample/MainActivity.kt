@@ -17,19 +17,12 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.migrosone.uilibrary.compose.LoadingButton
 import com.migrosone.uilibrary.compose.MigrosButton
 import com.migrosone.uilibrary.theme.MigrosCompanyType
 import com.migrosone.uilibrary.theme.MigrosTheme
-import kotlinx.coroutines.delay
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,21 +50,13 @@ private fun SampleApp() {
                 .fillMaxSize()
                 .padding(contentPadding),
         ) {
-            ComposeLoadingButtonSample()
+            ComposeMigrosButtonSample()
         }
     }
 }
 
 @Composable
-private fun ComposeLoadingButtonSample() {
-    var isLoading by remember { mutableStateOf(false) }
-    if (isLoading) {
-        LaunchedEffect(Unit) {
-            delay(1_200)
-            isLoading = false
-        }
-    }
-
+private fun ComposeMigrosButtonSample() {
     MigrosTheme(companyType = MigrosCompanyType.SANALMARKET) {
         Column(
             modifier = Modifier
@@ -89,18 +74,10 @@ private fun ComposeLoadingButtonSample() {
                 style = MaterialTheme.typography.bodyMedium,
             )
             Spacer(modifier = Modifier.height(16.dp))
-            LoadingButton(
-                text = stringResource(R.string.sample_submit),
-                loadingText = stringResource(R.string.sample_loading),
-                isLoading = isLoading,
-                onClick = { isLoading = true },
-                modifier = Modifier.fillMaxWidth(),
-            )
             MigrosButton(
                 buttonText = stringResource(R.string.sample_submit),
-                buttonOnClickAction = { isLoading = true },
+                buttonOnClickAction = {},
                 modifier = Modifier.fillMaxWidth(),
-                isEnabled = !isLoading,
             )
         }
     }

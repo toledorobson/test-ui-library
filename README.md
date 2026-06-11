@@ -4,7 +4,7 @@ An Android UI library starter inspired by Accompanist's library-first module lay
 
 ## Modules
 
-- `:ui-compose` exposes Jetpack Compose components such as `LoadingButton` and `MigrosButton`.
+- `:ui-compose` exposes Jetpack Compose components such as `MigrosButton`.
 - `:ui-theme` exposes the Migros Compose theme, brand color tokens, typography, dimensions, and font resources.
 - `:sample` demonstrates the Compose components and theme.
 - `build-logic/convention` contains shared Gradle convention plugins.

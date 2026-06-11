@@ -1,7 +1,6 @@
 <resources>
     <string name="sample_app_name">MigrosOne UI Library Sample</string>
-    <string name="sample_compose_title">Compose LoadingButton</string>
-    <string name="sample_body">Tap the button to preview the loading state.</string>
+    <string name="sample_compose_title">Compose MigrosButton</string>
+    <string name="sample_body">Preview the MigrosButton component inside MigrosTheme.</string>
     <string name="sample_submit">Submit</string>
-    <string name="sample_loading">Submitting</string>
 </resources>
