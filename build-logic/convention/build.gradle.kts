@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.andrikod.testuilibrary.buildlogic"
+group = "com.migrosone.uilibrary.buildlogic"
 
 java {
     toolchain {
@@ -13,21 +13,26 @@ java {
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.vanniktech.mavenPublishPlugin)
 }
 
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = "testuilibrary.android.application"
-            implementationClass = "com.andrikod.testuilibrary.buildlogic.AndroidApplicationConventionPlugin"
+            id = "com.migrosone.uilibrary.android.application"
+            implementationClass = "com.migrosone.uilibrary.buildlogic.AndroidApplicationConventionPlugin"
         }
         register("androidLibrary") {
-            id = "testuilibrary.android.library"
-            implementationClass = "com.andrikod.testuilibrary.buildlogic.AndroidLibraryConventionPlugin"
+            id = "com.migrosone.uilibrary.android.library"
+            implementationClass = "com.migrosone.uilibrary.buildlogic.AndroidLibraryConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "testuilibrary.android.library.compose"
-            implementationClass = "com.andrikod.testuilibrary.buildlogic.AndroidLibraryComposeConventionPlugin"
+            id = "com.migrosone.uilibrary.android.library.compose"
+            implementationClass = "com.migrosone.uilibrary.buildlogic.AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidLibraryPublish") {
+            id = "com.migrosone.uilibrary.android.library.publish"
+            implementationClass = "com.migrosone.uilibrary.buildlogic.AndroidLibraryPublishingConventionPlugin"
         }
     }
 }

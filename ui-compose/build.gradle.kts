@@ -1,15 +1,19 @@
 plugins {
-    id("testuilibrary.android.library.compose")
+    id("com.migrosone.uilibrary.android.library.compose")
+    id("com.migrosone.uilibrary.android.library.publish")
 }
 
 android {
-    namespace = "com.andrikod.testuilibrary.compose"
+    namespace = "com.migrosone.uilibrary.compose"
 }
 
 dependencies {
+    api(project(":ui-theme"))
     api(platform(libs.androidx.compose.bom))
-    api(libs.androidx.compose.material3)
     api(libs.androidx.compose.ui)
+    api(libs.androidx.compose.material3)
+
+    implementation(libs.androidx.compose.ui.tooling.preview)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
 

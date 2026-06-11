@@ -1,18 +1,18 @@
 plugins {
-    id("testuilibrary.android.application")
+    id("com.migrosone.uilibrary.android.application")
 }
 
 android {
-    namespace = "com.andrikod.testuilibrary.sample"
+    namespace = "com.migrosone.uilibrary.sample"
 
     defaultConfig {
-        applicationId = "com.andrikod.testuilibrary.sample"
+        applicationId = "com.migrosone.uilibrary.sample"
     }
 }
 
 dependencies {
     implementation(project(":ui-compose"))
-    implementation(project(":ui-view"))
+    implementation(project(":ui-theme"))
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)

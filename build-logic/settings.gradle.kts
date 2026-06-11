@@ -12,5 +12,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "test-ui-library-build-logic"
+rootProject.name = "migrosone-ui-library-build-logic"
 include(":convention")

@@ -15,8 +15,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "test-ui-library"
+rootProject.name = "migrosone-ui-library"
 
 include(":sample")
 include(":ui-compose")
-include(":ui-view")
+include(":ui-theme")

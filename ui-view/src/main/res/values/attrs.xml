@@ -1,7 +1,0 @@
-<resources>
-    <declare-styleable name="TulLoadingButtonView">
-        <attr name="tul_loadingButtonText" format="string" />
-        <attr name="tul_loadingButtonLoadingText" format="string" />
-        <attr name="tul_loadingButtonIsLoading" format="boolean" />
-    </declare-styleable>
-</resources>
