@@ -3,6 +3,10 @@ package com.migrosone.uilibrary.sample
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.migrosone.uilibrary.compose.buttons.AddToCartPlusButton
@@ -11,6 +15,7 @@ import com.migrosone.uilibrary.compose.buttons.CloseButton
 import com.migrosone.uilibrary.compose.buttons.MigrosButton
 import com.migrosone.uilibrary.compose.buttons.MigrosButtonOutlined
 import com.migrosone.uilibrary.compose.cards.InformationCard
+import com.migrosone.uilibrary.compose.checkboxes.MigrosCheckbox
 import com.migrosone.uilibrary.theme.Dimens
 import com.migrosone.uilibrary.compose.R as ComposeR
 
@@ -22,6 +27,10 @@ internal fun sampleComponentPackages(): List<ComponentPackage> = listOf(
     ComponentPackage(
         titleRes = R.string.sample_section_cards,
         sections = listOf(cardsSection()),
+    ),
+    ComponentPackage(
+        titleRes = R.string.sample_section_checkboxes,
+        sections = listOf(checkboxesSection()),
     ),
 )
 
@@ -98,6 +107,39 @@ private fun cardsSection(): ComponentSection =
                     modifier = Modifier.fillMaxWidth(),
                     infoText = stringResource(R.string.sample_information_card_text),
                 )
+            },
+        ),
+    )
+
+private fun checkboxesSection(): ComponentSection =
+    ComponentSection(
+        titleRes = R.string.sample_section_checkboxes,
+        samples = listOf(
+            ComponentSample(
+                titleRes = R.string.sample_migros_checkbox_title,
+                descriptionRes = R.string.sample_migros_checkbox_description,
+            ) {
+                var isChecked by rememberSaveable { mutableStateOf(false) }
+
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(Dimens.spacingSmall),
+                ) {
+                    MigrosCheckbox(
+                        isChecked = isChecked,
+                        onCheckedChanged = { isChecked = it },
+                    )
+                    MigrosCheckbox(
+                        isChecked = true,
+                        onCheckedChanged = {},
+                        isEnabled = false,
+                    )
+                    MigrosCheckbox(
+                        isChecked = false,
+                        onCheckedChanged = {},
+                        isEnabled = false,
+                    )
+                }
             },
         ),
     )
