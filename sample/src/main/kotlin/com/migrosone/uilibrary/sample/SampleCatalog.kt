@@ -10,10 +10,22 @@ import com.migrosone.uilibrary.compose.buttons.CampaignEnrollButton
 import com.migrosone.uilibrary.compose.buttons.CloseButton
 import com.migrosone.uilibrary.compose.buttons.MigrosButton
 import com.migrosone.uilibrary.compose.buttons.MigrosButtonOutlined
+import com.migrosone.uilibrary.compose.cards.InformationCard
 import com.migrosone.uilibrary.theme.Dimens
 import com.migrosone.uilibrary.compose.R as ComposeR
 
-internal fun sampleComponentSections(): List<ComponentSection> = listOf(
+internal fun sampleComponentPackages(): List<ComponentPackage> = listOf(
+    ComponentPackage(
+        titleRes = R.string.sample_section_buttons,
+        sections = listOf(buttonsSection()),
+    ),
+    ComponentPackage(
+        titleRes = R.string.sample_section_cards,
+        sections = listOf(cardsSection()),
+    ),
+)
+
+private fun buttonsSection(): ComponentSection =
     ComponentSection(
         titleRes = R.string.sample_section_buttons,
         samples = listOf(
@@ -72,5 +84,20 @@ internal fun sampleComponentSections(): List<ComponentSection> = listOf(
                 CloseButton(onDismiss = {})
             },
         ),
-    ),
-)
+    )
+
+private fun cardsSection(): ComponentSection =
+    ComponentSection(
+        titleRes = R.string.sample_section_cards,
+        samples = listOf(
+            ComponentSample(
+                titleRes = R.string.sample_information_card_title,
+                descriptionRes = R.string.sample_information_card_description,
+            ) {
+                InformationCard(
+                    modifier = Modifier.fillMaxWidth(),
+                    infoText = stringResource(R.string.sample_information_card_text),
+                )
+            },
+        ),
+    )
