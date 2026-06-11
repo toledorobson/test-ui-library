@@ -1,4 +1,4 @@
-package com.migrosone.uilibrary.compose
+package com.migrosone.uilibrary.compose.buttons
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth

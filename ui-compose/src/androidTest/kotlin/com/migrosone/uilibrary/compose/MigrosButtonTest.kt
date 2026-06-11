@@ -4,6 +4,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import com.migrosone.uilibrary.compose.buttons.MigrosButton
 import com.migrosone.uilibrary.theme.MigrosCompanyType
 import com.migrosone.uilibrary.theme.MigrosTheme
 import org.junit.Rule

@@ -1,5 +1,9 @@
 <resources>
     <string name="sample_app_name">MigrosOne UI Library Sample</string>
-    <string name="sample_back_content_description">Back</string>
-    <string name="sample_component_migros_button">MigrosButton</string>
+    <string name="sample_section_buttons">Buttons</string>
+    <string name="sample_migros_button_title">MigrosButton</string>
+    <string name="sample_migros_button_description">Filled primary action button.</string>
+    <string name="sample_migros_button_outlined_title">MigrosButtonOutlined</string>
+    <string name="sample_migros_button_outlined_description">Outlined secondary action button.</string>
+    <string name="sample_button_text">Submit</string>
 </resources>
