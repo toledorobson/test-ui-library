@@ -1,5 +1,6 @@
 package com.migrosone.uilibrary.sample
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -17,6 +18,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
+internal data class ComponentPackage(
+    val titleRes: Int,
+    val sections: List<ComponentSection>,
+)
+
 internal data class ComponentSection(
     val titleRes: Int,
     val samples: List<ComponentSample>,
@@ -27,6 +33,28 @@ internal data class ComponentSample(
     val descriptionRes: Int? = null,
     val content: @Composable () -> Unit,
 )
+
+@Composable
+internal fun ComponentPackageListScreen(
+    packages: List<ComponentPackage>,
+    onPackageClick: (Int) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    LazyColumn(
+        modifier = modifier.fillMaxSize(),
+        contentPadding = PaddingValues(24.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        packages.forEachIndexed { index, componentPackage ->
+            item(key = componentPackage.titleRes) {
+                ComponentPackageCard(
+                    componentPackage = componentPackage,
+                    onClick = { onPackageClick(index) },
+                )
+            }
+        }
+    }
+}
 
 @Composable
 internal fun ComponentCatalogScreen(
@@ -43,6 +71,30 @@ internal fun ComponentCatalogScreen(
                 ComponentSectionContent(section = section)
             }
         }
+    }
+}
+
+@Composable
+private fun ComponentPackageCard(
+    componentPackage: ComponentPackage,
+    onClick: () -> Unit,
+) {
+    OutlinedCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
+        shape = RoundedCornerShape(8.dp),
+        colors = CardDefaults.outlinedCardColors(
+            containerColor = MaterialTheme.colorScheme.surface,
+        ),
+    ) {
+        Text(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            text = stringResource(componentPackage.titleRes),
+            style = MaterialTheme.typography.titleMedium,
+        )
     }
 }
 

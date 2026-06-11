@@ -1,6 +1,8 @@
 <resources>
     <string name="sample_app_name">MigrosOne UI Library Sample</string>
+    <string name="sample_back_content_description">Back</string>
     <string name="sample_section_buttons">Buttons</string>
+    <string name="sample_section_cards">Cards</string>
     <string name="sample_migros_button_title">MigrosButton</string>
     <string name="sample_migros_button_description">Filled primary action button.</string>
     <string name="sample_migros_button_outlined_title">MigrosButtonOutlined</string>
@@ -12,5 +14,8 @@
     <string name="sample_campaign_enroll_button_text">Join Campaign</string>
     <string name="sample_close_button_title">CloseButton</string>
     <string name="sample_close_button_description">Circular dismiss action button.</string>
+    <string name="sample_information_card_title">InformationCard</string>
+    <string name="sample_information_card_description">Informational message card with an icon.</string>
+    <string name="sample_information_card_text">Your policy information will be sent by SMS.</string>
     <string name="sample_button_text">Submit</string>
 </resources>
