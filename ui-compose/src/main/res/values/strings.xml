@@ -1,0 +1,5 @@
+<resources>
+    <string name="migrosone_ui_compose_button_label_add_to_cart">Add to cart</string>
+    <string name="migrosone_ui_compose_student_tbg_campaigns_button_verified_success">Money Kartına Eklendi</string>
+    <string name="migrosone_ui_compose_button_close">Kapat</string>
+</resources>
