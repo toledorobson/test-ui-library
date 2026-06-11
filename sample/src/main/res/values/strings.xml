@@ -5,5 +5,12 @@
     <string name="sample_migros_button_description">Filled primary action button.</string>
     <string name="sample_migros_button_outlined_title">MigrosButtonOutlined</string>
     <string name="sample_migros_button_outlined_description">Outlined secondary action button.</string>
+    <string name="sample_add_to_cart_plus_button_title">AddToCartPlusButton</string>
+    <string name="sample_add_to_cart_plus_button_description">Compact add-to-cart icon button.</string>
+    <string name="sample_campaign_enroll_button_title">CampaignEnrollButton</string>
+    <string name="sample_campaign_enroll_button_description">Campaign action button with available and enrolled states.</string>
+    <string name="sample_campaign_enroll_button_text">Join Campaign</string>
+    <string name="sample_close_button_title">CloseButton</string>
+    <string name="sample_close_button_description">Circular dismiss action button.</string>
     <string name="sample_button_text">Submit</string>
 </resources>

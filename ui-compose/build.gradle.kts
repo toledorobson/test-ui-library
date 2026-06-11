@@ -5,6 +5,7 @@ plugins {
 
 android {
     namespace = "com.migrosone.uilibrary.compose"
+    resourcePrefix = "migrosone_ui_compose_"
 }
 
 dependencies {
@@ -12,6 +13,7 @@ dependencies {
     api(platform(libs.androidx.compose.bom))
     api(libs.androidx.compose.ui)
     api(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.core.android)
 
     implementation(libs.androidx.compose.ui.tooling.preview)
 
