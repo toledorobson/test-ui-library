@@ -15,7 +15,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "migrosone-ui-library"
+rootProject.name = "sanalmarket-android-ui-sdk"
 
 include(":sample")
 include(":ui-compose")

@@ -1,4 +1,4 @@
-# MigrosOne UI Library
+# Sanalmarket Android UI SDK
 
 An Android UI library starter inspired by Accompanist's library-first module layout and Now in Android's convention-plugin build structure.
 
@@ -15,8 +15,26 @@ Published artifacts:
 
 ```kotlin
 dependencies {
-    implementation("com.migrosone.uilibrary:migrosone-ui-library-compose:<version>")
-    implementation("com.migrosone.uilibrary:migrosone-ui-library-theme:<version>")
+    implementation("com.migrosone.sanalmarket.android.ui.sdk:sanalmarket-android-ui-sdk-compose:<version>")
+    implementation("com.migrosone.sanalmarket.android.ui.sdk:sanalmarket-android-ui-sdk-theme:<version>")
+}
+```
+
+Version catalog usage:
+
+```toml
+[versions]
+sanalmarketAndroidUiSdk = "0.1.4-SNAPSHOT"
+
+[libraries]
+sanalmarket-android-ui-sdk-compose = { module = "com.migrosone.sanalmarket.android.ui.sdk:sanalmarket-android-ui-sdk-compose", version.ref = "sanalmarketAndroidUiSdk" }
+sanalmarket-android-ui-sdk-theme = { module = "com.migrosone.sanalmarket.android.ui.sdk:sanalmarket-android-ui-sdk-theme", version.ref = "sanalmarketAndroidUiSdk" }
+```
+
+```kotlin
+dependencies {
+    implementation(libs.sanalmarket.android.ui.sdk.compose)
+    implementation(libs.sanalmarket.android.ui.sdk.theme)
 }
 ```
 
@@ -40,8 +58,8 @@ The publishable modules are `:ui-compose` and `:ui-theme`. The sample app and bu
 
 Coordinates:
 
-- `com.migrosone.uilibrary:migrosone-ui-library-compose`
-- `com.migrosone.uilibrary:migrosone-ui-library-theme`
+- `com.migrosone.sanalmarket.android.ui.sdk:sanalmarket-android-ui-sdk-compose`
+- `com.migrosone.sanalmarket.android.ui.sdk:sanalmarket-android-ui-sdk-theme`
 
 The default version is configured in `gradle.properties`:
 

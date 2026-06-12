@@ -1,12 +1,12 @@
 plugins {
-    id("com.migrosone.uilibrary.android.application")
+    id("com.migrosone.sanalmarket.android.ui.sdk.android.application")
 }
 
 android {
-    namespace = "com.migrosone.uilibrary.sample"
+    namespace = "com.migrosone.sanalmarket.android.ui.sdk.sample"
 
     defaultConfig {
-        applicationId = "com.migrosone.uilibrary.sample"
+        applicationId = "com.migrosone.sanalmarket.android.ui.sdk.sample"
     }
 }
 

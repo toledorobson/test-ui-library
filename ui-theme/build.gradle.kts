@@ -1,10 +1,10 @@
 plugins {
-    id("com.migrosone.uilibrary.android.library.compose")
-    id("com.migrosone.uilibrary.android.library.publish")
+    id("com.migrosone.sanalmarket.android.ui.sdk.android.library.compose")
+    id("com.migrosone.sanalmarket.android.ui.sdk.android.library.publish")
 }
 
 android {
-    namespace = "com.migrosone.uilibrary.theme"
+    namespace = "com.migrosone.sanalmarket.android.ui.sdk.theme"
 }
 
 dependencies {
