@@ -1,0 +1,4 @@
+interface:
+  display_name: "Theme Token Evolution"
+  short_description: "Change Migros theme tokens safely"
+  default_prompt: "Use $theme-token-evolution to update colors, typography, dimensions, or company theme behavior in this Android UI SDK."

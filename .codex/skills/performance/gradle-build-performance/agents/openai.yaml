@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gradle Build Performance"
+  short_description: "Measure and improve SDK build speed"
+  default_prompt: "Use $gradle-build-performance to diagnose a slow Gradle command in this Android UI SDK."

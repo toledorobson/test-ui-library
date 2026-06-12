@@ -1,0 +1,4 @@
+interface:
+  display_name: "Android Accessibility"
+  short_description: "Audit Compose SDK accessibility"
+  default_prompt: "Use $android-accessibility to audit or fix accessibility semantics in this Compose UI SDK."
