@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compose Performance Audit"
+  short_description: "Diagnose Compose jank and recomposition"
+  default_prompt: "Use $compose-performance-audit to review a slow or janky Compose component in this Android UI SDK."

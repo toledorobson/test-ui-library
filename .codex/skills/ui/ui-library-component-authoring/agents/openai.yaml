@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Library Component Authoring"
+  short_description: "Add Compose UI SDK components consistently"
+  default_prompt: "Use $ui-library-component-authoring to add or refactor a public Compose component in this Android UI SDK."
