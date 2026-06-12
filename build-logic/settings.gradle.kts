@@ -12,5 +12,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "migrosone-ui-library-build-logic"
+rootProject.name = "sanalmarket-android-ui-sdk-build-logic"
 include(":convention")
